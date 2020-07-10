@@ -4,7 +4,7 @@ ___
 
 
 <p align="center">
-  <img src="https://readme-maker.herokuapp.com/uploads/0fde648413c43a14-1040233915914.jpg" width="300" heigth="300">
+  <img src="https://i.imgur.com/ogp1u4L.jpg" width="300" heigth="300">
 </p>
 
 
@@ -26,7 +26,7 @@ ___
 
 ___
 
-<img src="https://readme-maker.herokuapp.com/uploads/e4ae1882ab2001c5-gerador.PNG" width="1200">
+<img src="https://i.imgur.com/nRmpoLM.png" width="1200">
 
 ## :information_source: Sobre
 
