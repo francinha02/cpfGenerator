@@ -98,7 +98,7 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/
 exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap);"]);
 // Module
-exports.push([module.i, ":root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: \"Open sans\", sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 10px;\r\n}\r\n\r\nform input,\r\nform label,\r\nform button {\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nform input {\r\n  font-size: 24px;\r\n  height: 50px;\r\n  padding: 0 20px;\r\n}\r\n\r\nform input:focus {\r\n  outline: 1px solid var(--primary-color);\r\n}\r\n\r\nform button {\r\n  border: none;\r\n  background: var(--primary-color);\r\n  color: #fff;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n}\r\n\r\nform button:hover {\r\n  background: var(--primary-color-darker);\r\n}\r\n", ""]);
+exports.push([module.i, ":root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: \"Open sans\", sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 10px;\r\n}\r\n\r\nform input,\r\nform label,\r\nform button {\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nform input {\r\n  font-size: 24px;\r\n  height: 50px;\r\n  padding: 0 20px;\r\n}\r\n\r\nform input:focus {\r\n  outline: 1px solid var(--primary-color);\r\n}\r\n\r\nform button {\r\n  border: none;\r\n  background: var(--primary-color);\r\n  color: #fff;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n}\r\n\r\nform button:hover {\r\n  background: var(--primary-color-darker);\r\n}\r\n\r\n.container h1 {\r\n  text-align: center;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.result {\r\n  font-size: 2em;\r\n  color: var(--primary-color);\r\n  text-align: center;\r\n  font-weight: bold;\r\n  margin-bottom: 40px;\r\n  letter-spacing: 5px;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -528,9 +528,69 @@ module.exports = content.locals || {};
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_CPFValidator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/CPFValidator */ "./src/modules/CPFValidator.js");
+/* harmony import */ var _modules_CPFMaker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/CPFMaker */ "./src/modules/CPFMaker.js");
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+(function () {
+  var newCPF = new _modules_CPFMaker__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  var cpf = document.querySelector(".result");
+  cpf.innerHTML = newCPF.newCpf();
+})();
+
+/***/ }),
+
+/***/ "./src/modules/CPFMaker.js":
+/*!*********************************!*\
+  !*** ./src/modules/CPFMaker.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CPFMaker; });
+/* harmony import */ var _CPFValidator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CPFValidator */ "./src/modules/CPFValidator.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var CPFMaker = /*#__PURE__*/function () {
+  function CPFMaker() {
+    _classCallCheck(this, CPFMaker);
+  }
+
+  _createClass(CPFMaker, [{
+    key: "rand",
+    value: function rand() {
+      var min = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 100000000;
+      var max = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 999999999;
+      return String(Math.floor(Math.random() * (max - min) + min));
+    }
+  }, {
+    key: "format",
+    value: function format(cpf) {
+      return cpf.slice(0, 3) + '.' + cpf.slice(3, 6) + '.' + cpf.slice(6, 9) + '-' + cpf.slice(9, 11);
+    }
+  }, {
+    key: "newCpf",
+    value: function newCpf() {
+      var cleanCpf = this.rand();
+      var digit1 = _CPFValidator__WEBPACK_IMPORTED_MODULE_0__["default"].generatesDigit(cleanCpf);
+      var digit2 = _CPFValidator__WEBPACK_IMPORTED_MODULE_0__["default"].generatesDigit(cleanCpf + digit1);
+      var cpf = cleanCpf + digit1 + digit2;
+      return this.format(cpf);
+    }
+  }]);
+
+  return CPFMaker;
+}();
 
 
 
