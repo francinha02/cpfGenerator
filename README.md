@@ -24,10 +24,6 @@ ___
   <a href="#licença">Licença</a>
 </h3>
 
-___
-
-<img src="https://i.imgur.com/nRmpoLM.png" width="1200">
-
 ## :information_source: Sobre
 
 Gerador de CPF válidos. Atualize a página para gerar um novo CPF válido.
