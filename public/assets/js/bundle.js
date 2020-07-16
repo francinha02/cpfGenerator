@@ -98,7 +98,7 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/
 exports = ___CSS_LOADER_API_IMPORT___(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap);"]);
 // Module
-exports.push([module.i, ":root {\r\n  --primary-color: rgb(17, 86, 102);\r\n  --primary-color-darker: rgb(9, 48, 56);\r\n}\r\n\r\n* {\r\n  box-sizing: border-box;\r\n  outline: 0;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  background: var(--primary-color);\r\n  font-family: \"Open sans\", sans-serif;\r\n  font-size: 1.3em;\r\n  line-height: 1.5em;\r\n}\r\n\r\n.container {\r\n  max-width: 640px;\r\n  margin: 50px auto;\r\n  background: #fff;\r\n  padding: 20px;\r\n  border-radius: 10px;\r\n}\r\n\r\nform input,\r\nform label,\r\nform button {\r\n  display: block;\r\n  width: 100%;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nform input {\r\n  font-size: 24px;\r\n  height: 50px;\r\n  padding: 0 20px;\r\n}\r\n\r\nform input:focus {\r\n  outline: 1px solid var(--primary-color);\r\n}\r\n\r\nform button {\r\n  border: none;\r\n  background: var(--primary-color);\r\n  color: #fff;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  height: 50px;\r\n  cursor: pointer;\r\n  margin-top: 30px;\r\n}\r\n\r\nform button:hover {\r\n  background: var(--primary-color-darker);\r\n}\r\n\r\n.container h1 {\r\n  text-align: center;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.result {\r\n  font-size: 2em;\r\n  color: var(--primary-color);\r\n  text-align: center;\r\n  font-weight: bold;\r\n  margin-bottom: 40px;\r\n  letter-spacing: 5px;\r\n}\r\n", ""]);
+exports.push([module.i, ":root {\n  --primary-color: rgb(17, 86, 102);\n  --primary-color-darker: rgb(9, 48, 56);\n}\n\n* {\n  box-sizing: border-box;\n  outline: 0;\n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: var(--primary-color);\n  font-family: \"Open sans\", sans-serif;\n  font-size: 1.3em;\n  line-height: 1.5em;\n}\n\n.container {\n  max-width: 640px;\n  margin: 50px auto;\n  background: #fff;\n  padding: 20px;\n  border-radius: 10px;\n}\n\nform input,\nform label,\nform button {\n  display: block;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\nform input {\n  font-size: 24px;\n  height: 50px;\n  padding: 0 20px;\n}\n\nform input:focus {\n  outline: 1px solid var(--primary-color);\n}\n\nform button {\n  border: none;\n  background: var(--primary-color);\n  color: #fff;\n  font-size: 18px;\n  font-weight: 700;\n  height: 50px;\n  cursor: pointer;\n  margin-top: 30px;\n}\n\nform button:hover {\n  background: var(--primary-color-darker);\n}\n\n.container h1 {\n  text-align: center;\n  margin-bottom: 40px;\n}\n\n.result {\n  font-size: 2em;\n  color: var(--primary-color);\n  text-align: center;\n  font-weight: bold;\n  margin-bottom: 40px;\n  letter-spacing: 5px;\n}\n\n.password {\n  font-size: 2em;\n  color: var(--primary-color);\n  margin: 40px 0;\n}\n\ninput[type=\"checkbox\"] {\n  width: 25px;\n  height: 25px;\n}\n\nbutton {\n  display: block;\n  margin: 40px 0;\n  font-size: 1em;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -528,17 +528,21 @@ module.exports = content.locals || {};
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_CPFMaker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/CPFMaker */ "./src/modules/CPFMaker.js");
-/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
-/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_formPassword__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/formPassword */ "./src/modules/formPassword.js");
+/* harmony import */ var _modules_CPFMaker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/CPFMaker */ "./src/modules/CPFMaker.js");
+/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
+/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_css_style_css__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
 (function () {
-  var newCPF = new _modules_CPFMaker__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  var newCPF = new _modules_CPFMaker__WEBPACK_IMPORTED_MODULE_1__["default"]();
   var cpf = document.querySelector(".result");
   cpf.innerHTML = newCPF.newCpf();
 })();
+
+Object(_modules_formPassword__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 /***/ }),
 
@@ -683,6 +687,88 @@ var CPFValidator = /*#__PURE__*/function () {
 }();
 
 
+
+/***/ }),
+
+/***/ "./src/modules/formPassword.js":
+/*!*************************************!*\
+  !*** ./src/modules/formPassword.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _geradores__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./geradores */ "./src/modules/geradores.js");
+
+var password = document.querySelector(".password");
+var qtdChar = document.querySelector(".qtd-char");
+var uppercase = document.querySelector(".uppercase");
+var lowercase = document.querySelector(".lowercase");
+var digits = document.querySelector(".digits");
+var symbols = document.querySelector(".symbol");
+var gerarSenha = document.querySelector(".gerar-senha");
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  gerarSenha.addEventListener("click", function () {
+    password.innerHTML = create();
+  });
+});
+
+function create() {
+  var pass = Object(_geradores__WEBPACK_IMPORTED_MODULE_0__["default"])(qtdChar.value, lowercase.checked, uppercase.checked, digits.checked, symbols.checked);
+  return pass || 'Nada Selecionado';
+}
+
+/***/ }),
+
+/***/ "./src/modules/geradores.js":
+/*!**********************************!*\
+  !*** ./src/modules/geradores.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return password; });
+var rand = function rand(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
+
+var upperCase = function upperCase() {
+  return String.fromCharCode(rand(65, 91));
+};
+
+var lowerCase = function lowerCase() {
+  return String.fromCharCode(rand(97, 123));
+};
+
+var digits = function digits() {
+  return String.fromCharCode(rand(48, 58));
+};
+
+var symbols = "`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? ";
+
+var selectSymbol = function selectSymbol() {
+  return symbols[rand(0, symbols.length)];
+};
+
+function password(qtd, lowercase, uppercase, digit, symbol) {
+  var array = [];
+  qtd = Number(qtd);
+
+  for (var i = 0; i < qtd; i++) {
+    var e = qtd[i];
+    lowercase && array.push(lowerCase());
+    uppercase && array.push(upperCase());
+    digit && array.push(digits());
+    symbol && array.push(selectSymbol());
+  }
+
+  return array.sort(function () {
+    return Math.random() - 0.5;
+  }).join("").slice(0, qtd);
+}
 
 /***/ })
 
